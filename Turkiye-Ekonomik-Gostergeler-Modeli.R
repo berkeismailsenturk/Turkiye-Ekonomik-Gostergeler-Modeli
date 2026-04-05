@@ -5,7 +5,6 @@ pkgs <- c("readxl", "dplyr", "tidyr", "ggplot2", "gridExtra",
           "reshape2", "moments", "zoo", "tseries", "urca", 
           "lmtest", "car", "sandwich", "strucchange", "vars")
 invisible(lapply(pkgs, library, character.only = TRUE))
-setwd("C:/Program Files")
 df <- read_excel("berkesenturk.xlsx", sheet = "Sayfa1")
 df$tarih <- as.Date(paste0(df$tarih, "-01"), format = "%Y-%m-%d")
 gsyh_vec <- df$gsyh
